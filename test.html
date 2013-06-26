@@ -4,24 +4,17 @@
 		<meta charset="utf-8" />
 		
 		<link rel="stylesheet" type="text/css" href="tables.css" />
-		
-		<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-		<link rel="stylesheet" type="text/css" href="dependencies/tablesorter.css" />
-		<script type="text/javascript" src="dependencies/jquery.tablesorter.min.js"></script>
-		
+		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="tablefilter-1.0.js"></script>
 		<link rel="stylesheet" type="text/css" href="tablefilter.css" />
 		
 		<script type="text/javascript">
 			$(document).ready(function () {
-				//$('#test-table').tablesorter();
-
 				$('#test-table').tablefilter({
 					save: true,
 					filters: {
 						'#search-box': {
-							event: 'keyup',
-							attribute: 'data-boxcode'
+							event: 'keyup'
 						},
 						
 						'select[name="name"]': {

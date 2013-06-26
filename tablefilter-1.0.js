@@ -183,7 +183,10 @@
 		},
 		
 		contains: function(text, flags) {
-			var pattern = (text.indexOf(' ') > 0) ? text.replace(/(\S+)/, function(word) { return '\\b' + word + '\\b';	}) : text;
+			var pattern = (text.indexOf(' ') < 0) ? text :
+				text.replace(/(\S+)/g, function(word) {
+					return '\\b' + word + '\\b';
+				});
 			var re = new RegExp(pattern, flags);
 			return re.test(this);
 		},
