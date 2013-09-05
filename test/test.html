@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		
 		<link rel="stylesheet" type="text/css" href="tables.css" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 		<script type="text/javascript" src="tablefilter-1.0.js"></script>
 		<link rel="stylesheet" type="text/css" href="tablefilter.css" />
 		
@@ -14,10 +14,17 @@
 					save: true,
 					filters: {
 						'#search-box': {
-							event: 'keyup'
+							event: 'keyup',
+							method: 'search'
 						},
 						
 						'select[name="name"]': {
+							event: 'change',
+							columns: 0,
+							apply: 'red'
+						},
+						
+						'#test-checkbox': {
 							event: 'change',
 							columns: 0,
 							apply: 'blue'
@@ -26,6 +33,11 @@
 				});
 			});
 		</script>
+		
+		<style type="text/css">
+			.blue { background-color: blue; }
+			.red { background-color: red !important; }
+		</style>
 	</head>
 	
 	<body>
@@ -36,6 +48,8 @@
 			<option value="New User">New User</option>
 			<option value="Jimmy Jickleburger">Jimmy Jickleburger</option>
 		</select>
+		<input type="checkbox" id="test-checkbox" value="Bob Barker" />
+		<label for="test-checkbox">Bob Barker</label>
 		
 		<table id="test-table" class="sortable">
 			<thead>
@@ -54,7 +68,7 @@
 					<td>Completed</td>
 				</tr>
 
-				<tr>
+				<tr class="test">
 					<td>New User</td>
 					<td>Improvement</td>
 					<td>Customer Project</td>

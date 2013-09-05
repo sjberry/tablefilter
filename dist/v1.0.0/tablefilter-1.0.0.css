@@ -1,0 +1,17 @@
+﻿.tf-noelements {
+	font-size: 15px;
+	text-align: center;
+	line-height: 0.3em;
+	
+	width: auto;
+	height: auto;
+	
+	padding: 15px;
+	
+	border: 1px solid #B4B4B4;
+	border-top: none;
+	
+	margin: 0;
+	
+	display: none;
+}
