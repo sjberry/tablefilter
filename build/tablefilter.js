@@ -104,7 +104,7 @@
 				}
 				
 				action = function(e) {
-					var start = new Date();
+					//var start = new Date();
 					
 					var $tableSet = $(targetSelector).filter('table');
 					
@@ -125,7 +125,7 @@
 						$(table).trigger('filterend');
 					});
 					
-					console.log((new Date() - start) + 'ms');
+					//console.log((new Date() - start) + 'ms');
 				};
 				
 				if ($.inArray(event, ['keyup', 'keydown']) >= 0) {
