@@ -457,8 +457,6 @@
 				callback = function() {
 					var value;
 
-					var start = new Date();
-
 					if (getRemoveCondition(this)) {
 						$tableSet.find('tbody tr').removeClass(apply);
 					}
@@ -475,8 +473,6 @@
 
 						$(table).trigger('filterend');
 					});
-
-					console.log(new Date() - start + 'ms');
 				};
 
 				if (event === 'keyup' || event === 'keydown') {
